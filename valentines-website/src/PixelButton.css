@@ -1,0 +1,47 @@
+.pixel-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  color: rgb(254, 236, 255);
+  padding: 14px 28px;
+  /* Thick, contrasting border to resemble old-school game menus */
+  border: 4px solid #804a91;
+  background-color: #8f5ca6;
+  cursor: pointer;
+  image-rendering: pixelated;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 150px;
+  border-radius: 0; /* Sharp, blocky edges */
+}
+
+.pixel-button:hover {
+  /* Slight color change on hover to indicate selection */
+  background-color: #c58cdd;
+}
+
+.pixel-button:active {
+  /* Simulate a pressed effect by shifting the button down slightly and darkening the background */
+  transform: translateY(2px);
+  background-color: #773d84;
+}
+
+/* Shaking animation keyframes */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.pixel-button.shake {
+  animation: shake 0.5s;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 600px) {
+  .pixel-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+    width: 120px;
+  }
+} 

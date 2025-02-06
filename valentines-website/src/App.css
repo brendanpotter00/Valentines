@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #ff7be0 0%, #f1c1eb 50%, #ffc8fa 100%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow from animations */
+  animation: fadeUp 1s ease-out; /* Apply fade-up animation */
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Starts 50px below its final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Container for HelloKitty and hearts so confetti originates from the kitty */
+.kitty-section {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+} 
